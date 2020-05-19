@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <div class="msg-box"></div>
+
+    <!--Item title-->
+    <div class="product-title">
+        <h2>1997-2001 Prostar 197</h2>
+    </div>
+    <!--top section with main image and smaller images below on largew screen display to left-->
+    <div class="gallery-product">
+        <!--add swiper box-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{% static 'img/00-001_Prostar_195.jpg' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/00-001_Prostar_195_angle.jpg' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/00-001_Prostar_195_back.jpg' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/00-001_Prostar_195_collapsed.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+
+{% endblock %}

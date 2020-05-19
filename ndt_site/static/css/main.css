@@ -1,0 +1,2384 @@
+/*******************************************************************************************************************************************************************************************MAIN_STYLE_SHEET***************************************************************************************************************************************************************************************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  min-height: 100%;
+  transition: all ease-in-out 2s;
+  text-align: center;
+}
+
+/* h1, h2, h3 {
+  font-family: 'Open sans', sans-serif;
+} */
+
+.spacer {
+  height: 200px;
+  width: 100%;
+}
+
+.spacer-small {
+  width: 100%;
+  height: 100px;
+}
+
+.spacer-xs {
+  width: 100%;
+  height: 50px;
+}
+
+.fullsize-background {
+  width: 100%;
+  height: 400px; 
+  background:linear-gradient(45deg,rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url("/static/img/finished/wake.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  -moz-box-shadow:0 5px 5px rgba(41, 39, 39, 0.75);
+  -webkit-box-shadow: 0 5px 5px rgba(41, 39, 39, 0.75);
+  box-shadow: 0 5px 5px rgba(41, 39, 39, 0.75);
+}
+
+.fullsize-background h1 {
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  padding-top: 85px;
+}
+
+/************header tile image of mastercraft***********/
+.header-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  position: relative;
+  top: -75px;
+  z-index: 5;
+
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+}
+
+/**************************************SECTIONS STYLES**********************************************************************************/
+
+
+
+/***************************************************SHOWCASE****************************************************************************/
+.showcase {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.grid-container {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: grid;
+}
+
+.grid-item {
+  margin-bottom: 50px;
+  padding: 5px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.grid-item h3 {
+  font-weight: bold;
+  color: #D66706;
+  font-size: 3rem;
+  text-transform: uppercase;
+  position: relative;
+  top: -75px;
+  margin-bottom: -30px;
+}
+
+.grid-item a {
+  display: inline-block;
+  border: solid 2px #D66706;
+  border-radius: 2px;
+  width: 100%;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #D66706;
+}
+
+.grid-item a:hover {
+  background-color: #D66706;
+  color: #fff;
+}
+
+.grid-item p {
+  text-align: center;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.showcase h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 10px 40px;
+}
+
+/********************************************BANNER WITH STRIPE AND IMAGE*************************************************/
+.banner_stripe {
+  width: 90%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner_stripe img {
+  width: 120px;
+  display: inline-block;
+}
+
+.banner_stripe .left-stripe {
+  width: 25%;
+  height: 1px;
+  background-color: rgba(25, 38, 41, 0.4);
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.banner_stripe .right-stripe {
+  width: 25%;
+  height: 1px;
+  background-color: rgba(25, 38, 41, 0.4);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/********************************************boat manufacturers*************************************************/
+.boat-manufac {
+  margin-top: 50px;
+  height: auto;
+  text-align: center;
+  position: relative;
+  padding: 0;
+}
+
+.boat-logos {
+  width: 90%;
+  height: 100px;
+  background-color: lightgray;
+}
+
+.boat-manufac p {
+  padding: 5px 10px;
+}
+
+.boat-manufac p:nth-last-child(2) {
+  margin-bottom: 50px;
+}
+
+.boat-manufac h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 20px 20px;
+}
+
+.boat-manufac img {
+  width: 80%;
+  margin-bottom: 50px;
+  height: 3.7rem;
+  object-fit: contain;
+}
+
+
+.boat-manufac .two-col-element img {
+  width: 90%;
+}
+
+.wrap {
+  width: 100%;
+  height: 450px;
+  padding: 2rem;
+  background: url("/static/img/wakeboard_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  z-index: -1;
+}
+
+.wrap h2 {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+
+
+/****************************************FEATURED TOWERS****************************************************/
+.featured-tower {
+  height: auto;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 50px 0;
+  position: relative;
+  background: #f4f4f4;
+}
+
+.featured-tower .title {
+  text-transform: uppercase;
+}
+
+.featured-tower h2 {
+  text-transform: uppercase;
+  padding: 10px 5px;
+}
+
+.featured-tower ul {
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: left;
+}
+
+.featured-tower img {
+  width: 90%;
+  padding-top: 30px;
+}
+
+.featured-tower a {
+  display: inline-block;
+  color: #fff;
+  width: 70%;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-radius: 2px;
+  background-color: rgb(51, 51, 51);
+  margin-bottom: 20px;
+}
+
+.featured-tower a:hover {
+  background-color: #000;
+}
+
+
+
+/***********************************FEATURED BIMINI TOPS*************************************/
+.biminis {
+  height: auto;
+  text-align: center;
+  position: relative;
+}
+
+.biminis .row {
+  margin: 0;
+}
+
+.biminis .left-content {
+  padding-bottom: 50px;
+}
+
+.biminis ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.biminis img {
+  width: 90%;
+  padding-bottom: 20px;
+}
+
+.biminis p {
+  padding: 10px;
+}
+
+.biminis h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+/***********************************FEATURED ACCESSORIES******************************************/
+.accessories {
+  height: auto;
+  margin-top: 50px;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+}
+
+.right-content img {
+  width: 90%;
+}
+
+.accessories h2 {
+  padding: 10px;
+}
+
+.accessories h3 {
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.accessories p {
+  padding: 10px;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.accessories ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.accessories a {
+  display: inline-block;
+  color: #333;
+}
+
+
+.accessories-wrapper a {
+  width: 70%;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 2px;
+  background-color: #333;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.accessories-wrapper a:hover {
+  background-color: #000;
+}
+
+.image-gallery .swiper-container {
+  width: 100%;
+}
+
+/* swiper slide card */
+/* .acc-card { */
+  /* border: none; */
+  /* border-radius: 4px; */
+  /* width: 12rem; */
+  /* background-color: #fff;
+  margin: 0 auto; */
+/* } */
+
+.acc-card a {
+  background-color: #fff;
+  margin: 0;
+}
+
+.acc-card-img {
+  width: 100%;
+}
+
+h3.acc-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding-top: 20px;
+}
+
+p.acc-card-tag {
+  text-align: center;
+  font-size: .9rem;
+}
+
+.call {
+  background-color: #3F88C5;
+  width: 100%;
+  height: 250px;
+}
+
+.call h2 {
+  color: #fff;
+  padding: 4rem;
+  font-size: 2rem;
+}
+
+.call a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.call a:hover {
+  color: #D66706;
+}
+
+/***************************************************FOOTER******************************************************************************/
+footer {
+  width: 100%;
+  background-color: #333;
+  height: auto;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+footer .row {
+  margin: 20px 0 20px 0;
+  padding: 20px;
+}
+
+footer h5 {
+  text-transform: uppercase;
+}
+
+footer .col-md-4 p {
+  color: rgba(255, 255, 255, .60);
+}
+
+footer img {
+  max-width: 200px;
+  padding: 20px;
+}
+
+
+footer ul {
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+
+
+footer li {
+  display: inline-block;
+}
+
+footer li a{
+  color: rgba(255, 255, 255, .60);
+}
+
+footer li a:hover{
+  color: rgba(255, 255, 255, .20);
+}
+
+
+footer .address {
+  margin: 5px 0 5px 0;
+  color: rgba(255, 255, 255, .60);
+}
+
+
+footer .address ul li p{
+  font-size: 0.8rem;
+  
+  margin: 0;
+}
+
+footer .address ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, .60);
+}
+
+footer .address ul li a:hover {
+  color: rgba(255, 255, 255, .20);
+}
+
+footer .copy {
+  margin: 5px 0 20px 0;
+}
+
+footer .copy li p {
+  color: rgba(255, 255, 255, .60);
+  font-size: 0.8rem;
+  margin: 10px 0 10px 0;
+}
+
+footer .copy ul li a:hover{
+  color: rgba(255, 255, 255, .20);
+}
+
+footer .top-line {
+  width: 80%;
+  height: 10px;
+  border-top: 1px solid rgba(255, 255, 255, .20);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .line {
+  width: 80%;
+  height: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, .20);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer ul li:first-child {
+  color: #fff;
+}
+
+footer .navigate li {
+  display: block;
+}
+
+footer .copy i {
+  padding: 0 10px 0 10px;
+  color: #fff;
+}
+
+/*************accessories ***************/
+
+.main-description {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 200px 20px 20px 20px;
+}
+
+.main-description h2 {
+  font-size: 3rem;
+}
+
+.main-description p {
+  text-align: justify;
+}
+
+
+/*********** featured accessories section **************/
+.highlighted.container {
+  border-bottom: 2px solid #ddd;
+}
+
+.item {
+  padding: 5px;
+}
+
+.item img {
+  width: 80%;
+  max-height: 250px;
+}
+
+.item p {
+  padding: 20px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.item p:hover {
+  color: #D66706;
+}
+
+.a-card-container {
+  background-color: #fff;
+  padding: 30px;
+}
+
+
+.a-card-container h2 {
+  margin: 20px;
+}
+
+.a-card-title {
+  font-size: 1.3rem;
+  padding-top: 5px;
+}
+
+.a-card {
+  border: none;
+  border-radius: 4px;
+  width: 15rem;
+  background-color: #fff;
+  margin: 10px;
+  text-align: left;
+}
+
+.a-card:hover {
+  -webkit-box-shadow: 5px 7px 15px -1px rgba(51,51,51,0.6);
+  -moz-box-shadow: 5px 7px 15px -1px rgba(51,51,51,0.6);
+  box-shadow: 5px 7px 15px -1px rgba(51,51,51,0.6);
+}
+
+
+.a-card-img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.a-card-title {
+  text-transform: capitalize;
+  color: #333;
+  padding-left: 20px;
+}
+
+.a-card-title:hover {
+  color: #D66706;
+}
+
+
+.a-card-tag {
+  color: rgb(113, 115, 121);
+  margin: 0;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.a-card-price {
+  font-weight: bold;
+  margin: 5px 0;
+  padding-left: 20px;
+}
+
+
+/************************************************ Contact styles *****************************************************************************/
+
+.section-head {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.contact-section h4 a {
+  color: #333;
+}
+
+.contact-section h4 {
+  line-height: 2rem;
+}
+
+.col-lg-5 {
+  padding: 0;
+}
+
+.row {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+}
+/*contact form ******need to specify only contact form*/
+#contact-form {
+  width: 100%;
+  height: 500px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#contact-form p {
+  margin: 0;
+}
+
+.col-lg-5 h4 {
+  padding: 0 15px 0 15px;
+  font-size: 1rem;
+}
+
+.col-lg-5 h3 {
+  padding: 0 20px 0 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.col-lg-5 h4.success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  border-radius: 4px;
+}
+
+
+#id_fullName,
+#id_phone,
+#id_email {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#id_message {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 80px;
+}
+
+.btn-form {
+  width: 100%;
+  border: 2px solid #D66706;
+  color: #D66706;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-form:hover {
+  background-color: #D66706;
+  color: white;
+}
+
+.col-centered{
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 100px;
+  background:linear-gradient(45deg,rgba(0,0,0,0.2),rgba(0,0,0,0.4)),url("/static/img/water.jpeg");
+  padding-bottom: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-info h2 {
+  margin: 50px 0;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.social {
+  text-decoration: none;
+  list-style: none;
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+
+.social li {
+  display: inline;
+  padding: 10px;
+  color: #333;
+}
+
+.social li:hover {
+  color: #D66706;
+}
+
+/******************************************************** Article (Blog) styles *********************************************************************/
+.blog-content {
+  background-color: #f8f8f8;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+
+/************************************** Tower styles **********************************************************************/
+.no-scroll {
+  overflow: hidden;
+}
+
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.top-title h2 {
+  margin-top: 20px;
+  font-size: 1.8rem;
+}
+
+.hero-top {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.hero-top h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* .hero-top img {
+  width: 100%;
+  height: auto;
+} */
+
+.top-img img {
+  width: 100%;
+  margin-top: -25px;
+}
+
+.custom-select {
+  font-size: 14px;
+}
+
+
+.boat-text {
+  font-size: 14px;
+  text-align: left;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.tower-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 200px 20px 0 20px;
+}
+
+.selection .selected {
+  margin-bottom: 2rem;
+}
+
+
+.row .col-md-6:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.card-container-tower {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 40px 0 40px 0;
+}
+
+.card-container-tower h3 {
+  padding: 10px
+}
+
+.sidebar {
+  margin-bottom: 50px;
+}
+
+.sidebar h2 {
+  margin-top: 50px;
+}
+
+/* .arrow-down {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.arrow-down::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: auto;
+  top: -50;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  border-right: 4px solid #D66706;
+  border-bottom: 4px solid #D66706;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation: 3s arrow infinite ease;
+  animation: 3s arrow infinite ease;
+  z-index: 1000;
+}
+
+@-webkit-keyframes arrow {
+  0%, 100% {
+    top: 50px;
+  }
+  50% {
+    top: 80px;
+  }
+}
+
+@keyframes arrow {
+  0%, 100% {
+    top: 50px;
+  }
+  50% {
+    top: 80px;
+  }
+} */
+
+
+/**************************** Swiper styles ***************/
+
+.swiper-container {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.swiper-slide {
+  width: 100%;
+}
+
+.swiper-image {
+  width: 100%;
+}
+
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23D66706'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23D66706'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.boat-title {
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.boat-features {
+  margin-bottom: 2rem;
+}
+
+
+.bottom-content {
+  float: right;
+}
+
+.bottom-content a {
+  text-decoration: none;
+  
+}
+
+.banner-links {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.banner-links ul {
+  padding: 0;
+}
+
+.banner-links ul li {
+  text-decoration: none;
+  list-style: none;
+  
+}
+
+.banner-links ul li a {
+  color: #333;
+  padding: 5px;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.card-container {
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/**************** CARD *******************************************/
+.card-container h3 {
+  text-transform: uppercase;
+}
+
+.box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+/*****************NEW CARD *******************/
+.card {
+  border: none;
+  width: 8.5rem;
+  height: 14rem;
+  -webkit-box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
+  -moz-box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
+  box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
+  margin: 10px;
+}
+
+.card:hover {
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
+  -moz-box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
+  box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
+}
+
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 102px;
+  object-fit: cover;
+  border-radius: .25rem .25rem 0 0;
+}
+
+.card-title {
+  display: block;
+  font-size: .8rem;
+  font-weight: bold;
+  padding: 10px 5px;
+  text-align: left;
+  margin: 0;
+  color: #333;
+}
+
+.card-tag {
+  text-align: left;
+  padding: 0 10px;
+  color: #9B9FB5;
+}
+
+.card-bottom {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #9B9FB5;
+  text-align: left;
+}
+
+.card-price {
+  display: inline;
+  font-weight: bold;
+  color: #D66706;
+  padding-bottom: 5px;
+}
+
+.card-bottom .card-icon {
+  float: right;
+}
+
+.card-icon i {
+  color: #9B9FB5;
+}
+
+/**************** About page styles *******************/
+#about {
+  background-color: #f4f4f4;
+}
+
+.top-container {
+  width: 100%;
+  height: 50vh;
+  background-color: #3F88C5;
+  text-transform: uppercase;
+}
+
+.top-container h1 {
+  padding-top: 150px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.top-container h6 {
+  color: #fff;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #3F88C5;
+  transform: rotate(45deg);
+  position: relative;
+  top: -25px;
+}
+
+.square-bottom {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f4f4f4;
+  transform: rotate(45deg);
+  position: relative;
+  top: 25px;
+}
+
+.square-review {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #DFEEEE;
+  transform: rotate(45deg);
+  top: -40px;
+}
+
+
+.shop-pictures img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+.reviews-container {
+  width: 100%;
+  height: auto;
+  background-color: #DFEEEE;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.reviews-container h3 {
+  padding-top: 100px;
+  font-size: 1.6rem;
+}
+
+.reviews-container p {
+  padding-bottom: 50px;
+}
+
+.bottom-container {
+  background-color: #f4f4f4;
+  width: 100%;
+  
+}
+
+.bottom-container h3 {
+  padding: 40px 0;
+}
+
+.about-text {
+  margin: 20px;
+  padding-bottom: 50px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.about-text h3 {
+  font-size: 1.6rem;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.review-card {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.review-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.review-text {
+  font-size: 14px;
+}
+
+.rating {
+  padding: 10px 0;
+}
+
+.rating i {
+  color: #FFA630;
+}
+
+
+/********************** BIMINIS PAGE **********************************/
+.heading {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.heading h2 {
+  padding-top: 150px;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.heading p {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.heading img {
+  width: 100%;
+}
+
+
+.bimini-gallery {
+  width: 100%;
+  height: auto;
+  background-color: #f4f4f4;
+  padding: 75px 20px;
+}
+
+.bimini-gallery h3 {
+  padding: 20px;
+  font-size: 1.4rem;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.img-card {
+  width: 100%;
+}
+
+.bimini-gallery img {
+  display: block;
+  width: 20rem;
+  padding: 10px;
+  max-height: 196px;
+}
+
+.bimini-bottom {
+  max-width: 1024px;
+  height: 500px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.bimini-bottom img {
+  width: 400px;
+}
+
+
+.bimini-bottom .thumbnails img {
+  width: 50px;
+  height: 50px;
+  margin: 5px 5px 10px 0;
+}
+
+.tower-selection {
+  width: 10rem;
+  height: 3rem;
+  border: 2px solid #9B9FB5;
+  margin: 20px auto;
+}
+
+.add-to-cart-btn {
+  width: 10rem;
+  height: 3rem;
+  border: 2px solid #9B9FB5;
+  margin: 0 auto;
+}
+
+/************ bimini product detail *********/
+
+/*******Comment out to show checkout feature ************/
+
+/* uncomment to hide for development */
+#temp-section {
+  display: none;
+}
+
+
+/************* Temp section **************/
+.temp-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.temp-section .row .col-md-5 img{
+  width: 100%;  
+}
+
+.thumbnail-img {
+  width: 75px;
+}
+
+.temp-text {
+  text-align: justify;
+}
+
+.temp-price {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+
+
+
+
+/************* End temp section **************/
+
+#shop-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+#shop-content {
+  display: none;
+}
+
+.left-column {
+  width: 20%;
+  margin-top: 60px;
+}
+
+.left-column img {
+  width: 50%;
+  display: block;
+  border: solid 1px #333;
+  margin: 5px 0 5px 0;
+}
+
+
+/* Columns */
+.middle-column {
+  grid-area: middle;
+  width: 50%;
+  position: relative;
+}
+
+ 
+.right-column {
+  grid-area: right;
+  width: 30%;
+  margin-top: 60px;
+  margin-left: 10px;
+}
+
+/* Left Column */
+.middle-column img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+ 
+.middle-column img.active {
+  opacity: 1;
+}
+
+/* Product Description */
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h2 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+  text-align: left;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+  text-align: left;
+}
+
+
+/* Product Color */
+.product-color {
+  margin-bottom: 30px;
+}
+ 
+.color-choose div {
+  display: inline-block;
+}
+ 
+.color-choose input[type="radio"] {
+  display: none;
+}
+ 
+.color-choose input[type="radio"] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+ 
+.color-choose input[type="radio"] + label span {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+}
+ 
+.color-choose input[type="radio"]#red + label span {
+  background-color: #C91524;
+}
+.color-choose input[type="radio"]#blue + label span {
+  background-color: #314780;
+}
+.color-choose input[type="radio"]#black + label span {
+  background-color: #323232;
+}
+.color-choose input[type="radio"]#orange + label span {
+  background-color: orange;
+}
+.color-choose input[type="radio"]#green + label span {
+  background-color: green;
+}
+.color-choose input[type="radio"]#purple + label span {
+  background-color: purple;
+}
+ 
+.color-choose input[type="radio"]:checked + label span {
+  background-image: url(images/check-icn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* Cable Configuration */
+.tower-choose {
+  margin-bottom: 20px;
+}
+ 
+.tower-choose button {
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+ 
+.tower-choose button:hover,
+.tower-choose button:active,
+.tower-choose button:focus {
+  border: 2px solid #86939E;
+  outline: none;
+}
+ 
+.tower-config {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+ 
+.tower-config a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
+}
+.tower-config a:before {
+  content: '';
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+/* Product Price */
+.product-price {
+  display: flex;
+  align-items: center;
+}
+ 
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.cart-btn {
+  display: inline-block;
+  background-color: #7DC855;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+.cart-btn:hover {
+  background-color: #64af3d;
+}
+
+/********************** Product page ***************/
+.msg-box {
+  height: 100px;
+  width: 100%;
+  background-color: #f8f8f8;
+  content: '';
+}
+
+.main-columns {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+
+.focused-image li img {
+  width: 100%;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 940px) {
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+ 
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+ 
+  .left-column img {
+    width: 300px;
+    right: 0;
+    top: -65px;
+    left: initial;
+  }
+}
+ 
+@media (max-width: 535px) {
+  .left-column img {
+    width: 220px;
+    top: -85px;
+  }
+}
+
+/*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************MEDIA_QUERIES*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@media screen and (min-width: 375px) {
+  .acc-card {
+    width: 15rem;
+  }
+
+  .card {
+    width: 10rem;
+    height: 17rem;
+  }
+
+  .card-image {
+    height: 120px;
+  }
+}
+
+
+/*******************************RULES FOR SCREEN WIDTHS OF 475 PX OR GREATER************************************************************/
+@media screen and (min-width: 405px) {
+  .header-image img {
+    top: -100px;
+  }
+
+  .acc-card {
+    width: 20rem;
+  }
+
+  .card {
+    width: 11rem;
+    height: 18rem;
+  }
+
+  .card-image {
+    height: 132px;
+  }
+}
+
+/*******************************RULES FOR SCREEN WIDTHS OF 520 PX OR GREATER***************************************/
+@media screen and (min-width: 520px) {
+  .header-image img {
+    top: -150px;
+  }
+}
+
+/*******************************RULES FOR SCREEN WIDTHS OF 768 PX OR GREATER***************************************/
+@media screen and (min-width: 768px) {
+
+
+  /*Fullsize background********************************/
+  .fullsize-background {
+    height: 600px;;
+  }
+
+  .fullsize-background h1 {
+    font-size: 5rem;
+    padding: 20px;
+    padding-top: 100px;
+  }
+
+  /*Showcase cards*************************************/
+  .grid-item img {
+    width: 90%;
+    height: 175px;
+  }
+
+  .grid-item h3 {
+    font-size: 2.5rem;
+    top: -75px;
+  }
+
+  .grid-item a {
+    width: 90%;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .grid-item a:hover {
+    background-color: #D66706;
+    color: #fff;
+    border-radius: 2px;
+    border: 2px solid #D66706;
+  }
+
+  .grid-item p {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+  .showcase h2 {
+    font-size: 3rem;
+  }
+
+  /*logo stripe*************************************/
+  .banner_stripe img {
+    width: 140px;
+  }
+
+  .banner_stripe .left-stripe {
+    width: 33%;
+    margin-right: 15px;
+  }
+
+  .banner_stripe .right-stripe {
+    width: 33%;
+    margin-left: 15px;
+  }
+
+  /*Boat manufacturers*******************************/
+  .boat-manufac h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2em;
+  }
+
+  .boat-manufac p {
+    font-size: 1.4rem;
+    padding: 0 20px;
+    margin-bottom: 25px;
+  }
+
+  .boat-manufac img {
+    width: 90%;
+  }
+
+  .boat-manufac .text p {
+    font-size: 1.2rem;
+  }
+
+  .boat-manufac .two-col-element {
+    margin-top: 50px;
+  }
+
+  /*Featured towers********************************/
+
+
+  .featured-tower h2 {
+    font-size: 2rem;
+  }
+
+  .featured-tower li {
+    font-size: .8rem;
+    padding: 5px;
+  }
+
+
+
+  /*Biminis section******************************/
+  .biminis {
+    margin-top: 200px;
+  }
+
+
+  .logo-sunbrella img {
+    width: 50%;
+  }
+
+  .color-selection img {
+    width: 90%;
+  }
+
+  .biminis p {
+    font-size: .9rem;
+    padding: 10px 40px;
+  }
+
+  .biminis h2 {
+    font-size: 2.9rem;
+  }
+
+  .biminis li {
+    font-size: .8rem;
+    
+  }
+
+  .biminis h3 {
+    font-size: 2.2rem;
+  }
+
+  .biminis .left-content img {
+    width: 90%;
+  }
+
+  .biminis .left-content {
+    margin-top: 30px;
+  }
+
+  .text-wrapper h3 {
+    margin-top: 40px;
+  }
+
+  .heading img {
+    width: 80%;
+  }
+
+  .img-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /*Options and accessories section******************/
+  .accessories-wrapper {
+    padding: 0px 15px;
+  }
+
+  .accessories .right-content img {
+    width: 90%;
+  }
+
+  .accessories h2 {
+    font-size: 2.5rem;
+  }
+
+  .accessories .options {
+    text-transform: uppercase;
+  }
+
+
+  .accessories p {
+    font-size: 1.2rem;
+    padding: 20px 40px;
+  }
+
+  .accessories h3 {
+    font-size: 2.3rem;
+  }
+
+  .accessories li {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .accessories .featured-content {
+    margin-top: 50px;
+  }
+
+    /* swiper slide card */
+  .acc-card {
+    border: none;
+    border-radius: 4px;
+    width: 25rem;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+  .acc-card a {
+    background-color: #fff;
+    margin: 0;
+  }
+
+  .acc-card-img {
+    width: 100%;
+  }
+
+  h3.acc-card-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+  }
+
+  .image-gallery {
+    margin-top: 50px;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+  }
+
+
+  /*Footer items*********************************/
+
+  footer .address ul li p{
+    font-size: 1rem;
+  }
+
+  footer .copy ul li p{
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    padding-top: 20px;
+  }
+
+
+
+
+  /* Banner links */
+  .banner-links {
+    background-color: transparent;
+  }
+
+  .banner-links ul li {
+    text-decoration: none;
+    font-size: 1.3rem;
+    list-style: none;
+    color: #333;
+    display: inline;
+    padding: 0 10px;
+  }
+
+  .banner-links ul li:hover {
+    text-decoration: none;
+    list-style: none;
+    background: #D66706;
+
+  }
+
+  .banner-links ul li a {
+    color: #333;
+    line-height: 2rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+  }
+
+
+  .banner-links ul li a:hover {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .tower-title {
+    font-size: 4rem;
+  }
+
+  .boat-title {
+    margin-top: 0;
+  }
+
+  .top-section {
+    grid-template-columns: 50% auto;
+    border-bottom: #D66706 solid 2px;
+  }
+
+  .top-title h2{
+    margin: auto 5px;
+    /* font-size: 1.2rem; */
+    margin-top: 20px;
+  }
+
+
+}
+
+/******************************RULES FOR SCREEN WIDTHS OF 1024 OR GREATER*********************************************/
+@media screen and (min-width: 1024px) {
+  /*Fullsize background***************************************/
+  .fullsize-background {
+    height: 700px;
+  }
+
+  .fullsize-background h1 {
+    font-size: 5rem;
+    padding: 100px 40px 0 40px;
+  }
+
+  /*Header image section*********************************************/
+  .header-image img {
+    width: 75%;
+  }
+
+  /*Showcase items*********************************************/
+  .showcase h2 {
+    font-size: 3.8rem;
+    padding: 10px 40px;
+    color: #333;
+  }
+
+  /*featured items***********************************************/
+  .boat-manufac .two-col-element {
+    margin-top: 100px;
+  }
+
+
+  .boat-manufac .two-col-element h2 {
+    font-size: 2rem;
+  }
+
+  .wrap {
+    height: 525px;
+  }
+
+  .boat-manufac img {
+    opacity: 0.7;
+  }
+
+  .boat-manufac img:hover {
+    opacity: 1;
+  }
+
+  /*featured items***********************************************/
+ 
+
+
+  /*Bimini items***********************************************/
+  .color-selection img {
+    width: 90%;
+  }
+
+  .text-wrapper h3 {
+    margin-top: 40px;
+  }
+
+  .biminis .left-content img {
+    padding: 0 15px;
+  }
+
+  .biminis .left-content p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .img-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /*Accessories content****************************************/
+  .accessories a {
+    width: 60%;
+  }
+
+  .call h2 {
+    font-size: 4rem;
+  }
+
+  .call a:hover {
+    color: #fff;
+  }
+
+
+  /* Banner links */
+  .banner-links {
+    background-color: transparent;
+  }
+
+  .banner-links ul li {
+    padding: 0 20px;
+  }
+
+  #contact-form {
+    margin: 0;
+  }
+
+  .col-centered {
+    width: 100%;
+  }
+
+
+
+  #id_message {
+    height: 100px;
+  }
+
+  .reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+  }
+
+  
+  .hero-top {
+    grid-template-columns: 40% auto;
+  }
+
+  .sidebar {
+    padding-top: 50px;
+    border-right: 2px solid #ddd;
+  }
+
+  .card-container {
+    padding-top: 50px;
+  }
+
+  .sidebar h2 {
+    margin-top: 0;
+  }
+
+  #show {
+    display: block;
+    position: absolute;
+    top: 50px;
+    visibility: hidden;
+  }
+}
+
+/******************************RULES FOR SCREEN WIDTHS OF 1224 OR GREATER*********************************************/
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/*Universal styles for body**********************/
+  section {
+    padding: 0 40px;
+  }
+
+  /*showcase section******************************/
+  .fullsize-background h1 {
+    padding-top: 125px;
+  }
+
+  .header-image img {
+    width: 80%;
+  }
+
+  /*showcase section******************************/
+  section.showcase {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .showcase h2 {
+    font-size: 3.8rem;
+    padding: 10px 40px;
+  }
+
+  .grid-item {
+    margin-bottom: 50px;
+    padding: 15px;
+  }
+
+  /*Featured tower**********************************/
+  .featured-tower {
+    padding: 50px 40px;
+  }
+
+  /*Boat manufac**********************************/
+  .logo-item img {
+    width: 60%;
+    height: 4.2rem;
+  }
+
+  /*Bimini section*********************************/
+  .biminis .logo-sunbrella img {
+    width: 35%;
+  }
+
+  .heading img {
+    width: 60%;
+  }
+
+  /*Accessories section*********************************/
+  .accessories {
+    padding: 50px 40px;
+  }
+
+  .tower-title {
+    font-size: 5rem;
+  }
+
+  .container h1 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+  }
+
+  .col-lg-5 h4 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    width: 13rem;
+    height: 22rem;
+  }
+
+  .card-image {
+    height: 156px;
+  }
+}
+
+
+
+
+/******************************RULES FOR SCREEN WIDTHS OF 1824 OR GREATER*********************************************/
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+
+
+  /*fullsize header*******************************/
+  .fullsize-background {
+    height: 100vh;
+  }
+
+
+  .fullsize-background h1 {
+    font-size: 6rem;
+    padding: 150px 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+
+  /*Header Img section******************************/
+  .header-image img {
+    width: 65%;
+    top: -350px;
+  }
+
+
+  /*Showcase section******************************/
+  section.showcase {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .grid-item {
+    margin-bottom: 50px;
+    padding: 25px;
+  }
+
+
+  /*Boat manufacturers section******************************/
+  .boat-manufac .text {
+    padding: 50px 150px;
+  }
+
+  .boat-manufac .text p {
+    font-size: 1.4rem;
+  }
+
+  .boat-manufac .two-col-element h2 {
+    font-size: 3rem;
+  }
+
+  .wrap {
+    height: 700px;
+  }
+
+  /*Featured tower section******************************/
+  .featured-tower img {
+    width: 75%;
+  }
+
+  .featured-tower h2 {
+    font-size: 3rem;
+  }
+
+  .featured-tower ul li {
+    font-size: 1.2rem;
+  }
+
+
+  /*Biminis section******************************/
+  .biminis .logo-sunbrella {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .biminis .logo-sunbrella img {
+    width: 30%;
+  }
+
+  .biminis .logo-sunbrella p {
+    font-size: 1.4rem;
+  }
+
+  .biminis .left-content {
+    margin-top: 100px;
+  }
+
+  .biminis .left-content img {
+    width: 70%;
+  }
+
+  .biminis .left-content p {
+    font-size: 1.5rem;
+    margin-right: 100px;
+  }
+
+  .biminis .right-content {
+    margin-top: 100px;
+  }
+
+  .biminis .right-content h2 {
+    font-size: 4rem;
+  }
+
+  .biminis .right-content ul li {
+    font-size: 1.4rem;
+    padding: 5px;
+  }
+
+  .biminis .right-content img {
+    width: 70%;
+  }
+
+  /*Accessories section******************************/
+  .accessories {
+    margin-top: 200px;
+  }
+
+  .accessories .accessories-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .accessories h2 {
+    font-size: 3rem;
+  }
+
+  .accessories p {
+    font-size: 1.5rem;
+  }
+
+  .accessories .accessories-wrapper .container-fluid {
+    margin-top: 100px;
+  }
+
+  .accessories .left-content h2 {
+    font-size: 3rem;
+    text-align: justify;
+  }
+
+  .accessories .left-content ul li {
+    font-size: 1.4rem;
+  }
+
+  .accessories .left-content img {
+    width: 80%;
+  }
+
+  .accessories .accessories-wrapper .featured {
+    margin-top: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .accessories .accessories-wrapper .featured h3 {
+    font-size: 3rem;
+  }
+
+
+
+  /*Footer section******************************/
+}
+
+
+  /******************************RULES FOR SCREEN WIDTHS OF 2560 OR GREATER*********************************************/
+/*  Xtra Large screens ----------- */
+@media only screen  and (min-width : 2480px) {
+/* Styles */
+
+  /*fullsize header*******************************/
+  .fullsize-background h1 {
+    font-size: 6rem;
+    padding: 60px 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+
+  /*showcase section******************************/
+  .header-image img {
+    width: 50%;
+  }
+}

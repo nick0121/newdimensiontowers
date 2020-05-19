@@ -1,0 +1,40 @@
+{% load static %}
+<!-----------------------FOOTER AREA WITH SOCIAL LINKS AND NAV AND LOCATION INFO----------------------------->
+<footer class="footer">
+    <div class="link-section">
+        <a href="{% url 'index' %}"><img src="{% static 'img/logo_modified.png' %}" alt=""></a>
+        <ul>
+            <li><a href="{% url 'index' %}">Home |</a></li>
+            <li><a href="{% url 'about' %}">About |</a></li>
+            <li><a href="{% url 'contact' %}">Contact |</a></li>
+            <li><a href="{% url 'towers' %}">Towers |</a></li>
+            <li><a href="{% url 'biminis' %}">Biminis |</a></li>
+            <li><a href="{% url 'accessories' %}">Accessories |</a></li>
+            <li><a href="{% url 'blogs' %}">Blog |</a></li>
+            <li><a href="{% url 'faq' %}">FAQ |</a></li>
+            <li><a href="{% url 'installation' %}">Installation</a></li>
+        </ul>
+    </div>
+    <div class="top-line"></div>
+    <div class="address">
+        <ul>
+            <li><p>New Dimension Towers</p></li>
+            <li><p>| 3933 East Lamar Alexander Pkwy Friendsville, TN 37886</p></li>
+            <li><p>| <a href="tel:8659951000">865-995-1000</a></p></li>
+        </ul>
+    </div>
+    <div class="line"></div>
+    <div class="copy">
+        <ul>
+            <li><P>&copy; New Dimension Towers {% now "Y" %} |</P></li>
+            <li><a href="{% url 'admin:index' %}"><p>Admin |</p></a></li>
+            <li><a href="{% url 'sitemap' %}"><p>Sitemap</p></a></li>
+            <br>
+            <li><a href="https://www.facebook.com/New-Dimension-Towers-117133852312374/"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/new-dimension-towers/"><i class="fab fa-linkedin fa-2x"></i></a></li>
+            <li><a href="https://www.instagram.com/newdimensiontowers/?hl=en"><i class="fab fa-instagram fa-2x"></i></a></li>
+            <li><a href="https://www.youtube.com"><i class="fab fa-youtube-square fa-2x"></i></a></li>  
+        </ul>
+    </div>
+
+</footer>

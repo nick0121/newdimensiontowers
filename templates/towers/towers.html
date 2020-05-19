@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% load static %}
+
+
+{% block title %}Exact-Fit Wakeboard Towers | New Dimension Towers{% endblock %}
+
+{% block content %}
+<main>
+    <!--------------------------------------STATIC CONTENT ---------------------------------------------------------------->
+
+
+    <div class="spacer-small top"></div>
+    <div class="top-section">
+        <div class="top-img">
+            <img src="{% static 'img/finished/tower-2.jpg' %}" alt="">
+        </div>
+        <div class="top-title">
+            <h1>NDT Wakeboard Towers</h1>
+            <p class="boat-text">New Dimension wakeboard towers are strong, lightweight, and built to withstand extreme conditions. All of our towers are specifically designed and fabricated to fit your exact make and model of boat. No universal joints or adjustments are needed. Fabricated using 1 7/8 inch diameter, brushed and anodized 6061 aluminum tubing, creating the ultimate light weight, corrosion resistant tower. The mounting base is custom designed and machined using polished billet aluminum removing the need for a large metal plate bolted to the hull. Every element of the New Dimension wakeboard tower is designed to enhance the look and performance of your boat.</p>
+        </div>
+    </div>
+
+   
+
+    <div class="hero-top">
+        <div class="sidebar">
+            
+            <div class="spacer-xs" id="show"></div>
+
+            <h2>Select your boat</h2>
+
+            
+            <!--------Select form and submit button------------>
+            <form action="{% url 'towers' %}#show" method="POST" id="tower-form">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </form>
+
+        </div>
+ 
+
+                <!--Boat gallery-->
+        <div class="card-container">
+
+            {% if towers %}
+                <h3>{{title}}<span> TOWERS</span></h3>
+            {% else %}
+                <h3>No towers to display</h3>
+            {% endif %}
+            
+            <div class="box">
+
+                {% if towers %}
+                    {% for tower in towers %}
+    
+                        <a href="{% url 'tower_product' tower.manufacturer tower.slug %}">
+                            <div class="card">
+                                <img src="{{ tower.first_image.image.url }}" alt="{{ tower.first_image.description }}" class="card-image">
+                                
+                                <h3 class="card-title">{{tower.title}}</h3>
+                                <div class="card-bottom">
+                                    <p class="card-price">${{ tower.price | intcomma }}</p>
+                                    <i class="fas fa-plus-circle card-icon"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                    {% endfor %}
+                {% else %}
+                    <div class="col-md-12">
+                        <p>No towers available</p>
+                    </div>
+                {% endif %}
+
+            </div>
+
+            <div class="spacer-small"></div>
+        </div>
+    </div>    
+
+        <div class="spacer-small" id="reviews"></div>
+
+        <div class="card-container-tower">
+            <h3>What our customers are saying</h3>
+            <div class="reviews">
+                <div class="review-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="review-name">Worth every penny!</h3>
+                    <p class="review-text">This tower made an old boat new again. The tower fit beautifully on my older-model Bayliner – it looks great! It also makes wakeboarding far more enjoyable for my family – my sons and I are getting much higher out of the water and having a great time. We also use the boat much more often than we did before. I also went back to add some speakers and lights which really set the whole thing off and are a lot of fun out on the water. I couldn’t have asked for more. – Ben P.</p>
+                </div>
+                <div class="review-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="review-name">Worth the wait and effort!</h3>
+                    <p class="review-text">It took a while to get the tower, but it was well worth the wait! The fit and finish is on par with Zero-Flex and the bolt points are just as sleek. I called New Dimension Towers directly for some advice and they were great. I’m fairly handy with tools, etc., and still found this challenging. I put mine on a 1999 ProStar – the difficult part was the mounting of the backing plates, I had to do a lot of it by feel. Just be patient and you will be rewarded with an awesome tower. - Mike</p>
+                </div>
+                <div class="review-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="review-name">No Question. This is your tower!</h3>
+                    <p class="review-text">Had the tower installed on my 2001 Mastercraft ProStar 190. It’s tight! It’s a dead ringer for the factory Zero-Flex tower for half the price. Pimped it out with a Mako 6 light bar. Now we are lighting up the night. New Dimension hand makes each tower specifically for your boat. If you need a tower this is the only way to go. - Bruce C.</p>
+                </div>
+            </div>
+        </div>
+    <div class="spacer"></div>
+</main>
+{% endblock %}

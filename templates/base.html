@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142825007-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142825007-2');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/favicon-2.png' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+
+
+    <script src="https://kit.fontawesome.com/95356eae92.js"></script>
+
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta name="description" content="New Dimension Towers specializes in exact-fit wakeboard towers and hybrid universal wakeboard towers including wakeboard racks, tower speakers, tower lights, tower accessories and bimini tops that fit any wakeboard tower.">
+
+    <meta name="keywords" content="wakeboard tower and accessories, wake board tower and accessories, wakeboard towers, wake board tower, universal tower, universal wakeboard tower, wakeboard tower bimini, wake board tower bimini, wakeboard rack, wake board rack, wakeboard tower speakers, wakeboard tower lights, board rack, tower speakers, tower lights, tower mirrors">
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+</head>
+<body>
+    {% include 'partials/_header.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'partials/_footer.html' %}
+    <!----------------------------Links for Jquery and javascript files------------------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/product.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC77WYpaIbp9ASmcbRXNe-sZPVkwECntnE&callback=initMap"></script>
+</body>
+</html>

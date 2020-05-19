@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Wakeboard towers & accessories | New Dimension Towers{% endblock %}
+
+{% block content %}
+
+<div class="fullsize-background">
+    <h1>NDT Premium Wakeboard Towers <br> for <span class="type"></span></h1>
+</div>
+
+<!---------banner image 50% OVER BACKGROUND IMAGE------------------>
+<div class="header-image">
+    <img src="{% static 'img/finished/ndt_boat.jpg' %}" alt="">
+</div>
+
+
+<!--SHOWCASE SECTION WITH TOWERS AND BIMINI TOPS ADD LINKS-------------->
+<section class="showcase" id="towers">
+    <div class="grid-container">
+        
+        <div class="towers grid-item">
+            <img src="{% static 'img/tower-water.jpg' %}" alt="New dimension towers wakeboarding boat">
+            <!-- <h3>Towers</h3> -->
+            <a href="{% url 'towers' %}">Browse all towers</a>
+            <p>All NDT towers are built specifically to fit your exact make and model of boat using only the highest quality materials.</p>
+        </div>
+        <div class="bimini grid-item">
+            <img src="{% static 'img/finished/bimini-final.jpg' %}" alt="new dimension towers bimini top on mastercraft tower logo red bimini">
+            <!-- <h3>Biminis</h3> -->
+            <a href="{% url 'biminis' %}">Browse bimini tops</a>
+            <p>With custom Sunbrella fabrics each NDT Bimini Tops is customized to fit the shape, style, and contour of your exact boat.</p>
+        </div>
+        <div class="accessory grid-item">
+            <img src="{% static 'img/finished/rack-main.jpg' %}" alt="new dimension towers board racks">
+            <!-- <h3>accessories</h3> -->
+            <a href="{% url 'accessories' %}">Browse Accessories</a>
+            <p>Custom All Aluminum Billet Racks, Lights, and more. With the Same strength and reliability you've come to trust with NDT.</p>
+        </div>
+       
+
+    </div>
+    <h2>bringing you the new dimension in wakeboard towers</h2>
+    <div class="spacer"></div>
+</section>
+
+<!------------------------LOGO WAVE STRIPE--------------------------->
+<div class="banner_stripe">
+    <div class="left-stripe"></div>
+    <img src="{% static 'img/logo_modified.png' %}" alt="">
+    <div class="right-stripe"></div>
+</div>
+
+<!------------------BOAT MANUFACTURURES AND WEB COPY-------------------->
+<section class="boat-manufac">
+    <h2>designed for every top boat brand</h2>
+    <p>Select your boat</p>
+<!-------- container for boat manufacture logo ------------------->
+    <div class="boat-logos-container container-fluid">
+        <div class="logo-item row">
+            <div class="col-sm col-md-4 col-lg-4">
+                <a href="{% url 'tower_manufacturer' manufacturer_name='supra' %}"><img src="{% static 'img/boats/supra.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='mastercraft' %}"><img src="{% static 'img/boats/mastercraft.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='malibu' %}"><img src="{% static 'img/boats/malibu.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='moomba' %}"><img src="{% static 'img/boats/moomba.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='tige' %}"><img src="{% static 'img/boats/tige.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='caravelle' %}"><img src="{% static 'img/boats/caravelle.png' %}" alt=""></a>
+            </div>
+            <div class="col-sm col-md-4 col-lg-4">
+                <a href="{% url 'tower_manufacturer' manufacturer_name='starcraft' %}"><img src="{% static 'img/boats/starcraft.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='bryant' %}"><img src="{% static 'img/boats/bryant.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='bayliner' %}"><img src="{% static 'img/boats/bayliner.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='centurion' %}"><img src="{% static 'img/boats/centurion.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='cobalt' %}"><img src="{% static 'img/boats/cobalt.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='crownline' %}"><img src="{% static 'img/boats/crownline.png' %}" alt=""></a>
+            </div>
+            <div class="col-sm col-md-4 col-lg-4">
+                <a href="{% url 'tower_manufacturer' manufacturer_name='nautique' %}"><img src="{% static 'img/boats/nautique.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='sea-doo' %}"><img src="{% static 'img/boats/sea_doo.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='yamaha' %}"><img src="{% static 'img/boats/yamaha.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='stingray' %}"><img src="{% static 'img/boats/stingray.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='four-winns' %}"><img src="{% static 'img/boats/four_winns.png' %}" alt=""></a>
+                <a href="{% url 'tower_manufacturer' manufacturer_name='chaparral' %}"><img src="{% static 'img/boats/chaparral_boats.png' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="text">
+        <p>Originally patterned after the top OEM brands including Mastercraft, Supra, and Moomba. We now offer custom towers for all the top brand Run About boats from 1987 to present.</p>
+        <p>Every New Dimension wakeboard towers is strong, lightweight, and built to withstand extreme conditions. All of our towers are specifically designed and fabricated to fit your exact make and model of boat without the use of universal joints, the weakness of other aftermarket towers.</p>
+        <p>Instead of the typical horizontal tube cross-member the New Dimension Tower includes a stylish all aluminum billet plate polished for the optional wakeboard rack forks and accessories to mount.</p>
+        <p>We use only high quality 1-7/8″ diameter brushed and anodized 6061 aluminum tubing. Creating the most lightweight, and corrosion resistant tower around. Our towers are mounted to the boat with precision machined billet aluminum feet that match the specific profile of your boat removing the need for a large metal plate bolted to the hull, and eliminating a common failure point.</p>
+    </div>
+
+    <div class="wrap">
+        <div class="two-col-element">
+            <div>
+                <h2>EVERY ELEMENT OF THE NEW DIMENSION PREMIUM TOWER IS DESIGNED TO ELEVATE THE LOOK, PERFORMANCE, AND VALUE OF YOUR BOAT. </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!---------------FEATURED TOWERS SECTION--------------------------->
+<section class="featured-tower" id="featured-tower">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="left-content col-sm-10 col-md-6">
+                <h2 class="title">The NDT wakeboard tower</h2>
+                <h2 class="title">$1,795 - $2,395</h2>
+                <ul>
+                    <li>Absolute strongest tower on the market</li>
+                    <li>Custom powder coating colors available</li>
+                    <li>Customize your tower with a variety of accesories</li>
+                    <li>1-7/8" Brushed and Anodized 6061 Aluminum tubing</li>
+                    <li>Lightweight all aluminum construction</li>
+                    <li>Specifically designed to match your boat</li>
+                </ul>
+                <a href="{% url 'towers' %}">View towers</a>
+            </div>
+            <div class="right-content col-sm-10 col-md-6">
+                <img src="{% static 'img/finished/wake_tower.jpg' %}" alt="">
+                <h2 class="tag">Custom wakeboarding towers for your specific boat</h2>
+            </div>
+        </div>
+
+    </div>
+
+    
+</section>
+
+
+<!--------------BIMINI INFO SECTION-------------------->
+<section class="biminis" id="biminis">
+
+
+    <div class="left-content container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-sm col-md-5 col-lg-6 align-self-center">
+                <img src="{% static 'img/bimini.jpg' %}" alt="">
+            </div>
+            <div class="col-sm col-md-7 col-lg-6 align-self-center">
+                <p>New Dimension Tower Bimini’s are specifically designed and fabricated to fit your exact make and model of boat tower. Each NDT Bimini is specially designed with easy release brackets which allow the bimini to be folded and secured to the tower for storage.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-content container-fluid">
+        <div class="row">
+            <div class="col-sm col-lg-6">
+                <h2>Starting at just $795</h2>
+                <ul>
+                    <li>Adds value to your boat</li>
+                    <li>Keeps your boat deck cool</li>
+                    <li>Custom designed for your exact boat</li>
+                    <li>Easliy foldable for convenient storage</li>
+                    <li>Durable construction</li>
+                    <li>High quality Stainless Steel fittings</li>
+                    <li>Resistant to Sun, Wind, and Rain</li>
+                </ul>
+            </div>
+            <div class="col-sm col-lg-6 align-self-center">
+                <div class="color-selection">
+                    <img src="{% static 'img/bimini_canvas_colors-2.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-wrapper">
+            <h3>Choose any canvas color option to further customize your very own Bimini tower</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="banner_stripe">
+    <div class="left-stripe"></div>
+    <img src="{% static 'img/logo_modified.png' %}" alt="">
+    <div class="right-stripe"></div>
+</div>   
+
+<!----------------ACCESORIES INFORMATION----------------------------->
+<section class="accessories" id="accessories">
+    <div class="accessories-wrapper">
+        <h2 class="options">Featured accessories</h2>
+        <p>NDT offers several options for accessories and customization of towers. All our accessories are made in house with the highest quality materials.</p>
+        <a href="{% url 'accessories' %}">Shop Accessories</a>
+        <div class="image-gallery">
+            <div class="swiper-container" data-space-between="10" data-slides-per-view="3">
+                <div class="swiper-wrapper">
+
+                    {% for product in products %}
+                    
+                        <div class="swiper-slide">
+                            <div class="acc-card">
+                                <img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="acc-card-img">
+                                <h3 class="acc-card-title">{{ product.name }}</h3>
+                                <p class="acc-card-tag">{{ product.description }}</p>
+                            </div>
+                        </div>
+                   
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="spacer"></div>
+
+
+    </div>
+</section>
+
+<div class="call">
+    <h2>Call us today <br><span><a href="tel:8659951000">1-865-995-1000</a></span></h2>
+</div>
+
+{% endblock %}

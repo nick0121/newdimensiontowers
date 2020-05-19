@@ -1,0 +1,191 @@
+/**********************************HEADER NAVIGATION AND HAMBURGER MENU STYLES**********************************************************/
+/***************************************************************************************************************************************/
+
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    z-index: 98;
+  }
+  
+  
+  .brand {
+    position: fixed;
+    padding-left: 20px;
+    float: left;
+    line-height: 75px;
+    z-index: 100;
+  }
+  
+  .brand img {
+      width: 140px;
+  }
+  
+  
+  
+  
+  nav ul li a,
+  nav ul li a:visited {
+    display: block;
+    padding: 0 20px;
+    line-height: 75px;
+    background: #333;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a:visited:hover {
+    background: #993300;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  nav {
+    width: 100%;
+    padding: 75px 0 15px 0;
+    
+  }
+  nav ul {
+    display: none;
+    padding: 0;
+  }
+  nav ul li {
+    float: none;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  
+  /* Mobile navigation */
+  .nav-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #333;
+    height: 75px;
+    width: 75px;
+  }
+  
+  /*******************************************************************************************************************************************************************************************************************************************************************************************************************************************MEDIA_QUERIES****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+  
+  
+  
+  /***********APPLY THESE RULES IF THE VIEWPORT IS GREATER THAN 768PX************/
+  @media screen and (min-width: 768px) {
+    /*REMOVES HAMBURGER ICON*/
+  
+    .nav-mobile {
+      display: none;
+    }
+  
+    nav {
+      height: 75px;
+      padding: 0;
+  
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      float: right;
+    }
+    nav ul li {
+      float: left;
+      position: relative;
+      
+   
+    }
+    nav ul li a {
+      padding: 0 15px;
+    }
+  
+    nav ul li a,
+    nav ul li a:visited {
+      display: block;
+      padding: 0 15px;
+      line-height: 75px;
+      background: #333;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  
+    nav ul li a:hover,
+    nav ul li a:visited:hover {
+      background: #993300;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  
+    .nav-list {
+      display: block !important;
+    }
+  
+  }
+  
+  /***************APPLY THESE RULES IF THE VIEWPORT IS 1024 PX OR GREATER*********************/
+  @media screen and (min-width: 1024px) {
+  
+    
+  
+    nav ul li a {
+      padding: 0 25px;
+    }
+  
+    ul.nav-list li:nth-last-child(1) {
+      padding-right: 50px;
+    }
+  }
+  
+  
+  
+  
+  /******************NOT PART OF MEDIA QUERIES*********************************************/
+  /*************NAV TOGGLE STYLES FOR HAMBURGER MENU TOGGLE EFFECT*************************/
+  #nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+  }
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #ffffff;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  #nav-toggle span:before {
+    top: -10px;
+  }
+  #nav-toggle span:after {
+    bottom: -10px;
+  }
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+  #nav-toggle.active span:before, #nav-toggle.active span:after {
+    top: 0;
+  }
+  #nav-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  #nav-toggle.active span:after {
+    transform: rotate(-45deg);
+  }

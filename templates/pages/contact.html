@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us | New Dimension Towers{% endblock %}
+
+{% block content %}
+<!------------------------Content for contact page--------------------------------->
+<main>
+    
+    <div class="spacer"></div>
+    <!-- contact details -->
+    <div class="contact-section">
+        <h3><strong>New Dimension Towers</strong></h3>
+        <h4>3933 Lamar Alexander Pkwy<br>Friendsville, Tn 37742</h4>
+        <h4>Call us at <a href="tel:8659951000">865-995-1000</a>
+        <span><br> or email <a href="mailto:wayne@newdimensiontowers.com">Wayne@newdimensiontowers.com</a></span></h4> 
+    </div>
+
+
+    <div class="spacer-xs"></div>
+
+    <h2>Check us out on social</h2>
+    <div class="social-links">
+        <ul class="social">
+            <li><i class="fab fa-facebook-square fa-3x"></i></li>
+            <li><i class="fab fa-twitter-square fa-3x"></i></li>
+            <li><i class="fab fa-instagram fa-3x"></i></li>
+            <li><i class="fab fa-google-plus-square fa-3x"></i></li>
+        </ul>
+    </div>
+
+    <!-----------------contact Information------------------->
+    <section class="contact-info">
+
+        <h2 class="section-head">Contact us</h2>
+            <!-- <p class="section-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et provident animi necessitatibus consectetur quo, amet unde perspiciatis minima consequatur aliquid.</p> -->
+
+        <div class="row">
+
+            <div class="col-lg-5 col-centered">
+                <!------------------google map------------------------->
+                <section class="map">
+                    <div id="map"></div>
+                </section>
+            </div>
+            <div class="col-lg-5 col-centered">
+
+                <!-- form -->
+                <form method = "POST" id="contact-form">
+                    {% csrf_token %}
+                    <h3>contact form</h3>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <h4 class="{{message.tags}}">{{ message }}</h4>
+                        {% endfor %}
+                    {% else %}
+                        <!--<h4>leave us a message and someone will contact you soon</h4>-->
+			<h4>Contact form is temporarily down for maintainence. please send email to <a href="mailto:wayne@newdimensiontowers.com">wayne@newdimensiontowers</a></h4>
+                    {% endif %}
+                    <div class="form-group">
+                        {{ form.as_p }}
+                    </div>
+                    <button class="btn-form" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </form>
+
+            </div>
+        </div>
+        
+    </section>
+
+</main>
+
+
+{% endblock %}

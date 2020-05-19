@@ -1,0 +1,12 @@
+User-agent: *
+Crawl-delay: 120
+Disallow: /admin/
+Disallow: /faq/
+Disallow: /blog/
+Disallow: /admin/login/?next=/admin/
+Disallow: /installation/
+Disallow: /accessory
+
+
+
+Sitemap: https://www.newdimensiontowers.com/sitemap.xml

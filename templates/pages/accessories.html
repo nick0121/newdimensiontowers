@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Wakeboard Racks & Accessories | New Dimension Towers{% endblock %}
+
+{% block content %}
+    <!------------------------Content for Accessories page--------------------------------->
+<main>
+    <!-- <div class="banner-alert">
+        <div class="banner-top">
+            <h3>Site maintenance</h3>
+        </div>
+        <p>We are working on making your experience better. Please call <strong><a href="tel:8659951000">865.995.1000</a></strong> for more information or to place an order</p>
+        <div class="banner-bottom"></div>
+    </div> -->
+    <div class="main-description">
+        <h2>NDT Parts & Accessories</h2>
+        <p>NDT offers a wide variety of accessories for your NDT wakeboard tower. Our boardracks are 100% made in house from high quality CNC machined 6061 billet aluminum. Lost a part? we offer replacement parts of all the hardware we use. Add the highest quality bimini on the market to your NDT tower to keep you cool on the lake. </p>
+        <br>
+        <p>While your here, check out our NDT apperal. Look good this summer with our custom made tees and hats.</p>
+    </div>
+
+    <!-- Highlighted content -->
+    <div class="highlighted container">
+        <h2>Accessories</h2>
+        <div class="main-accessories">
+            <div class="item">
+                <a href="{% url 'biminis' %}"><img class="highlighted" src="{% static 'img/finished/bimini-final.jpg' %}" alt="new dimension towers bimini with logo red sunbrella fabric"></a>
+                <a href="{% url 'biminis' %}"><p>Biminis</p></a>
+            </div>
+            <div class="item">
+                <a href="{% url 'accessory' query='board-racks' %}"><img class="highlighted" src="{% static 'img/finished/rack-main.jpg' %}" alt="new dimension towers wakeboard racks"></a>
+                <a href="{% url 'accessory' query='board-racks' %}"><p>Racks</p></a>
+            </div>
+            <div class="item">
+                <a href="{% url 'accessory' query='accessory' %}"><img class="highlighted" src="{% static 'img/finished/part-gear.jpg' %}" alt="parts and gear from new dimension towers"></a>
+                <a href="{% url 'accessory' query='accessory' %}"><p>Parts & Gear</p></a>
+            </div>
+        </div>
+    </div>
+
+    <!----------------Cards------------------->
+    <div class="container">
+        <div class="a-card-container" id="parts">
+            <h2>Parts & Gear</h2>
+    
+            <div class="box">
+    
+                {% if products %}
+                    {% for product in products %}
+                    <a href="{% url 'accessory_product' product.category product.slug %}">
+                        <div class="a-card">
+                            <img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="a-card-img">
+                            <h3 class="a-card-title">{{ product.name }}</h3>
+                            <p class="a-card-price">${{ product.price }}</p>
+                            <p class="a-card-tag">{{ product.description }}</p>
+                        </div>
+                    </a>
+
+                    {% endfor %}
+                {% else %}
+                    <h2>No products to display</h2>
+                {% endif %}
+    
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="spacer"></div>
+
+</main>
+{% endblock %}

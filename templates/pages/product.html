@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% load static %}
+
+{% block title %}Wakeboard towers & accessories | New Dimension Towers{% endblock %}
+
+{% block content %}
+<main>
+    <div class="product-headline-card">
+        <h3>Site Maintenance</h3>
+        <p>We are working hard to make your experience better. Please call <span><a href="tel:8659951000">865.995.1000</a></span> for questions or to place an order. We are sorry for any inconvenience.</p>
+    </div>
+    <!-- make three columns vertical images left, featured-image center, details right -->
+    <div class="spacer-small"></div>
+    {% if tower %}
+        <div class="product-content">
+            <div class="thumbnail-images">
+                <ul class="image-list">
+                    {% for image in images %}
+                        <l1><img src="{{ image.image.url }}" alt=""></l1>
+                    {% endfor %}
+
+                </ul>
+            </div>
+            {% with tower.0 as t %}
+                <div class="product-featured-image">
+                    
+                    <img src="{{ t.first_image.image.url }}" alt="{{ t.first_image.description }}" class="active">
+                        <!-- <l1><img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="active"></l1> -->
+                    
+                </div>
+        
+                <div class="product-detail-section">
+                    <div class="product-detail-heading">
+                        <h2 class="product-detail-title">{{ t.title }}</h2>
+                        <p class="product-detail-tag">{{ t.model }}</p>
+                    </div>
+
+                    <p class="product-detail-price">${{ t.price | intcomma }}</p>
+                    <p class="product-detail-availability"><span>Availability:</span> 3-4 weeks</p>
+                    <p class="product-detail-description">{{ t.description }}</p>
+
+
+                    
+                        <!-- add more items to order -->
+                        <!-- add if statement to remove if product is not a tower-->
+                    <!-- finish -->
+                    <div class="product-detail-selection">
+                        <label for="finish">Finish:</label>
+                        <select name="finish" id="finish">
+                            <option value="brushed">Brushed</option>
+                            <option value="powdercoated">Powdercoated</option>
+                            <option value="Polished">Polished</option>
+                        </select>
+                    </div>
+                    <div class="product-detail-color hidden">
+                        <!--If powder coat is selected dispaly colors-->
+                        <p>Choose a color</p>
+                        <div class="sunbrella-colors-grid">
+                            <!--ONCE SELECTED FOCUS A BORDER AND CHANGE OPACITY TO OTHER IMAGES LOWER-->
+                            <img id="img" src="{% static 'img/black.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/logo_red.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/captain_navy.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/turquoise.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/sunflower_yellow.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/persian_green.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/medditerrainian_blue.jpg' %}" alt="" style="width:75px; height:75px;">
+                        </div>
+                        <p>* call for custom color options</p>
+                    </div>
+                    <div class="product-detail-input-lighted">
+                        <input type="checkbox" id="lighted" name="lighted" value="lighted">
+                        <label for="lighted">Lighted ski tow <span>(+ $50)</span></label>
+                    </div>
+
+                    <div class="product-detail-input-racks">
+                        <!--add racks-->
+                        <input type="checkbox" id="racks" name="racks" value="racks">
+                        <label for="lighted">Add racks</label>
+
+                        <div class="rack-display">
+                            <p>Wakeboard racks:</p>
+                            <div class="wakeboard-rack-images rack-items">
+                                <img src="{% static 'img/rack_mastercraft_br.jpg' %}" alt="">
+                                <img src="{% static 'img/rack_moomba-supra_br.jpg' %}" alt="">
+                                <img src="{% static 'img/rack_titan_br.jpg' %}" alt="">
+                            </div>
+                            <p>Kneeboard racks:</p>
+                            <div class="kneeboard-rack-images rack-items">
+                                <img src="{% static 'img/rack_fusion_kb.jpg' %}" alt="">
+                            </div>
+                            <p>Ski racks:</p>
+                            <div class="ski-rack-images rack-items">
+                                <img src="{% static 'img/rack_mastercraft_ski.jpg' %}" alt="">
+                                <img src="{% static 'img/rack_titan_br.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-detail-input-bimini">
+                        <input type="checkbox" id="bimini" name="bimini" value="bimini">
+                        <label for="bimini">Add Bimini:</label>
+
+                        <div class="product-detail-color">
+                            <!--If powder coat is selected dispaly colors-->
+                            <p style="font-weight: normal;">*Choose a color</p>
+                            <div class="sunbrella-colors-grid">
+                                <!--ONCE SELECTED FOCUS A BORDER AND CHANGE OPACITY TO OTHER IMAGES LOWER-->
+                                <img id="img" src="{% static 'img/black.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/logo_red.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/captain_navy.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/turquoise.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/sunflower_yellow.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/persian_green.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/medditerrainian_blue.jpg' %}" alt="" style="width:75px; height:75px;">
+                            </div>
+                            <p>* call for custom color options</p>
+                        </div>
+                    </div>
+
+
+                    <!--FORM SECTION WHERE YOU SELECT WHAT WILL GET PASSED TO CART-->
+                    <div class="product-detail-checkout">
+                        <!-- <a href="#!">Add to cart</a> -->
+                        <p>*please call <a href="tel:8659951000">865.995.1000</a> to order</p>
+                    </div>
+
+                </div>
+            {% endwith %}
+        </div>
+    {% elif product %}
+        <div class="product-content">
+            <div class="thumbnail-images">
+                <ul class="image-list">
+                    {% for image in images %}
+                        <l1><img src="{{ image.image.url }}" alt=""></l1>
+                    {% endfor %}
+
+                </ul>
+            </div>
+            {% with product.0 as p %}
+                <div class="product-featured-image">
+                    
+                    <img src="{{ p.first_image.image.url }}" alt="{{ p.first_image.description }}" class="active">
+                        <!-- <l1><img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="active"></l1> -->
+                    
+                </div>
+        
+                <div class="product-detail-section">
+                    <div class="product-detail-heading">
+                        <h2 class="product-detail-title">{{ p.name }}</h2>
+                        <p class="product-detail-tag">{{ p.category }}</p>
+                    </div>
+
+                    <p class="product-detail-price">${{ p.price | intcomma }}</p>
+                    <p class="product-detail-availability"><span>Availability:</span> 4-5 days</p>
+                    <p class="product-detail-description">{{ p.description }}</p>
+
+
+                    
+                        <!-- add more items to order -->
+                        <!-- add if statement to remove if product is not a tower-->
+                    <!-- finish -->
+                    <div class="product-detail-selection">
+                        <label for="finish">Finish:</label>
+                        <select name="finish" id="finish">
+                            <option value="brushed">Brushed</option>
+                            <option value="powdercoated">Powdercoated</option>
+                            <option value="Polished">Polished</option>
+                        </select>
+                    </div>
+                    <div class="product-detail-color hidden">
+                        <!--If powder coat is selected dispaly colors-->
+                        <p>Choose a color</p>
+                        <div class="sunbrella-colors-grid">
+                            <!--ONCE SELECTED FOCUS A BORDER AND CHANGE OPACITY TO OTHER IMAGES LOWER-->
+                            <img id="img" src="{% static 'img/black.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/logo_red.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/captain_navy.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/turquoise.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/sunflower_yellow.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/persian_green.jpg' %}" alt="" style="width:75px; height:75px;">
+                            <img id="img" src="{% static 'img/medditerrainian_blue.jpg' %}" alt="" style="width:75px; height:75px;">
+                        </div>
+                        <p>* call for custom color options</p>
+                    </div>
+                    <div class="product-detail-input-lighted">
+                        <input type="checkbox" id="lighted" name="lighted" value="lighted">
+                        <label for="lighted">Lighted ski tow <span>(+ $50)</span></label>
+                    </div>
+
+                    <div class="product-detail-input-racks">
+                        <!--add racks-->
+                        <input type="checkbox" id="racks" name="racks" value="racks">
+                        <label for="lighted">Add racks</label>
+
+                        <div class="rack-display">
+                            <p>Wakeboard racks:</p>
+                            <div class="wakeboard-rack-images rack-items">
+                                <img src="{% static 'img/rack_mastercraft_br.jpg' %}" alt="">
+                                <img src="{% static 'img/rack_moomba-supra_br.jpg' %}" alt="">
+                                <img src="{% static 'img/rack_titan_br.jpg' %}" alt="">
+                            </div>
+                            <p>Kneeboard racks:</p>
+                            <div class="kneeboard-rack-images rack-items">
+                                <img src="{% static 'img/rack_fusion_kb.jpg' %}" alt="">
+                            </div>
+                            <p>Ski racks:</p>
+                            <div class="ski-rack-images rack-items">
+                                <img src="{% static 'img/rack_mastercraft_ski.jpg' %}" alt="">
+                                <img src="{% static 'img/rack_titan_br.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-detail-input-bimini">
+                        <input type="checkbox" id="bimini" name="bimini" value="bimini">
+                        <label for="bimini">Add Bimini:</label>
+
+                        <div class="product-detail-color">
+                            <!--If powder coat is selected dispaly colors-->
+                            <p style="font-weight: normal;">*Choose a color</p>
+                            <div class="sunbrella-colors-grid">
+                                <!--ONCE SELECTED FOCUS A BORDER AND CHANGE OPACITY TO OTHER IMAGES LOWER-->
+                                <img id="img" src="{% static 'img/black.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/logo_red.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/captain_navy.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/turquoise.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/sunflower_yellow.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/persian_green.jpg' %}" alt="" style="width:75px; height:75px;">
+                                <img id="img" src="{% static 'img/medditerrainian_blue.jpg' %}" alt="" style="width:75px; height:75px;">
+                            </div>
+                            <p>* call for custom color options</p>
+                        </div>
+                    </div>
+
+
+                    <!--FORM SECTION WHERE YOU SELECT WHAT WILL GET PASSED TO CART-->
+                    <div class="product-detail-checkout">
+                        <!-- <a href="#!">Add to cart</a> -->
+                        <p>*please call <a href="tel:8659951000">865.995.1000</a> to order</p>
+                    </div>
+
+                </div>
+            {% endwith %}
+        </div>
+    {% endif %}
+    <div class="spacer-small"></div>
+    <div class="product-additional-section">
+        <div class="card-container-tower">
+            <h3>What our customers are saying</h3>
+            <div class="reviews">
+                <div class="review-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="review-name">Worth every penny!</h3>
+                    <p class="review-text">This tower made an old boat new again. The tower fit beautifully on my older-model Bayliner – it looks great! It also makes wakeboarding far more enjoyable for my family – my sons and I are getting much higher out of the water and having a great time. We also use the boat much more often than we did before. I also went back to add some speakers and lights which really set the whole thing off and are a lot of fun out on the water. I couldn’t have asked for more. – Ben P.</p>
+                </div>
+                <div class="review-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="review-name">Worth the wait and effort!</h3>
+                    <p class="review-text">It took a while to get the tower, but it was well worth the wait! The fit and finish is on par with Zero-Flex and the bolt points are just as sleek. I called New Dimension Towers directly for some advice and they were great. I’m fairly handy with tools, etc., and still found this challenging. I put mine on a 1999 ProStar – the difficult part was the mounting of the backing plates, I had to do a lot of it by feel. Just be patient and you will be rewarded with an awesome tower. - Mike</p>
+                </div>
+                <div class="review-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="review-name">No Question. This is your tower!</h3>
+                    <p class="review-text">Had the tower installed on my 2001 Mastercraft ProStar 190. It’s tight! It’s a dead ringer for the factory Zero-Flex tower for half the price. Pimped it out with a Mako 6 light bar. Now we are lighting up the night. New Dimension hand makes each tower specifically for your boat. If you need a tower this is the only way to go. - Bruce C.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+
+{% endblock %}
