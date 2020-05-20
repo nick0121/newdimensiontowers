@@ -32,75 +32,74 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 try:
     SECRET_KEY = config["SECRET_KEY"]
-except NameError:
+except KeyError:
     pass
 # SECURITY WARNING: don't run with debug turned on in production!
-try:
-    GET_DEBUG = config.get("DEBUG")
 
-    if GET_DEBUG == 'True':
+try:
+    GET_DEBUG = config["DEBUG"]
+
+    if GET_DEBUG == "True":
         DEBUG = True
     else:
         DEBUG = False
-except NameError:
+except KeyError:
     DEBUG = True
-    
 
 
-
-ALLOWED_HOSTS = ['www.newdimensiontowers.com', '104.237.143.152']
+ALLOWED_HOSTS = ["www.newdimensiontowers.com", "104.237.143.152", "127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'towers.apps.TowersConfig',
-    'blogs.apps.BlogsConfig',
-    'pages.apps.PagesConfig',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.sites',
-    'django.contrib.sitemaps',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'phone_field',
-    'django.contrib.humanize',
-    'storages',
+    "towers.apps.TowersConfig",
+    "blogs.apps.BlogsConfig",
+    "pages.apps.PagesConfig",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.sites",
+    "django.contrib.sitemaps",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "phone_field",
+    "django.contrib.humanize",
+    "storages",
 ]
 
 SITE_ID = 1
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'ndt_site.urls'
+ROOT_URLCONF = "ndt_site.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'ndt_site.wsgi.application'
+WSGI_APPLICATION = "ndt_site.wsgi.application"
 
 
 # Database
@@ -110,16 +109,16 @@ WSGI_APPLICATION = 'ndt_site.wsgi.application'
 try:
 
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': config["DB_NAME"],
-            'USER': config["DB_USER"],
-            'PASSWORD': config["DB_PASSWORD"],
-            'HOST': 'localhost',
-            'PORT': '5432',
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": config["DB_NAME"],
+            "USER": config["DB_USER"],
+            "PASSWORD": config["DB_PASSWORD"],
+            "HOST": "localhost",
+            "PORT": "5432",
         }
     }
-except NameError:
+except KeyError:
     pass
 
 # Password validation
@@ -127,26 +126,20 @@ except NameError:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
 ]
 
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -154,14 +147,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-#Countries module settings
-COUNTRIES_FIRST =  [
-    'US',
-    'GB',
+# Countries module settings
+COUNTRIES_FIRST = [
+    "US",
+    "GB",
 ]
 
-
-
+###### EMAIL SETTINGS
 try:
 
     EMAIL_HOST_USER = config["EMAIL_HOST_USER"]
@@ -169,11 +161,11 @@ try:
     EMAIL_PASSWORD = config["EMAIL_PASSWORD"]
 
     EMAIL_HOST = config["EMAIL_HOST"]
-except NameError:
+except KeyError:
     pass
 
-DEFAULT_FROM_EMAIL = 'owner@newdimensiontowers.com'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = "owner@newdimensiontowers.com"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
@@ -182,36 +174,35 @@ EMAIL_USE_SSL = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 
-
-
 ################# AWS ACCESS KEYS
 try:
-    AWS_ACCESS_KEY_ID = config.get("AWS_ACCESS_KEY_ID")
-    AWS_SECRET_ACCESS_KEY = config.get("AWS_SECRET_ACCESS_KEY")
-    AWS_STORAGE_BUCKET_NAME = config.get("AWS_STORAGE_BUCKET_NAME")
+    AWS_ACCESS_KEY_ID = config["AWS_ACCESS_KEY_ID"]
+    AWS_SECRET_ACCESS_KEY = config["AWS_SECRET_ACCESS_KEY"]
+    AWS_STORAGE_BUCKET_NAME = config["AWS_STORAGE_BUCKET_NAME"]
 
-    AWS_LOCATION = 'static'
-    AWS_S3_FILE_OVERWRITE = False
-    AWS_DEFAULT_ACL = None
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-    AWS_S3_CUSTOM_DOMAIN = '%s.s3.us-east-2.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-    STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-except NameError:
+except KeyError:
     pass
 
+
+AWS_LOCATION = "static"
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+AWS_S3_CUSTOM_DOMAIN = "%s.s3.us-east-2.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
+STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
 
 # when collectstatic runs this it will collect all static files and put them here
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static')
 # ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-#Media Folder Settings
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+# Media Folder Settings
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = "/media/"
 
 try:
     from .local_settings import *
