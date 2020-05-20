@@ -1,8 +1,8 @@
 
 from django.conf import settings
 from django.contrib import messages
-from django.core.mail import send_mail
-from django.http import HttpResponseRedirect
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.urls import reverse
 from towers.forms import SearchForm
@@ -32,25 +32,30 @@ def about(request):
 def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
-        #####SET UP EMAIL HERE
-        # message = request.POST.get("message")
-        message = "this is a test email"
-        toEmail = "owner@vankoindustries.com"
-        fromEmail = settings.EMAIL_HOST_USER
 
         if form.is_valid():
 
+            #####SET UP EMAIL HERE
+            subject = f"Message from {form.cleaned_data['fullName']}"
+            message = f"Reply to email {form.cleaned_data['email']} \n {form.cleaned_data['message']}"
+            sender = 'owner@vankoindustries.com'
+            #sender = form.cleaned_data['email']
+
+            recipeints = ['wayne@newdimensiontowers.com']
+
             form.save()
 
-                        # send mail
-            send_mail(
-                "new mail from website",
-                message,
-                fromEmail,
-                [toEmail,],
-                fail_silently=True,
-            )
-
+            # send mail
+            try:
+                send_mail(
+                    subject,
+                    message,
+                    sender,
+                    recipeints,
+                    fail_silently=True,
+                )
+            except BadHeaderError:
+                return HttpResponse('Invalid Header Found')
             form = ContactForm()
             messages.success(request, "Thanks!! Someone will contact you soon")
             return HttpResponseRedirect(reverse("contact"))

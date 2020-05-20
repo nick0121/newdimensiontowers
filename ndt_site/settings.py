@@ -67,6 +67,8 @@ INSTALLED_APPS = [
     "phone_field",
     "django.contrib.humanize",
     "storages",
+    "antispam",
+    "antispam.honeypot",
 ]
 
 SITE_ID = 1
@@ -153,22 +155,32 @@ COUNTRIES_FIRST = [
     "GB",
 ]
 
-###### EMAIL SETTINGS
+###### EMAIL SETTINGS SENDGRID SMTP
+# EMAIL_HOST = "smtp.sendgrid.net"
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "apikey"
+
+
+# try:
+
+#     EMAIL_HOST_PASSWORD = config["EMAIL_HOST_PASSWORD"]
+
+# except KeyError:
+#     pass
+
+# EMAIL_USE_TLS = True
+
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+###### EMAIL SETTINGS SENDGRID API KEY
+
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 try:
-
-    EMAIL_HOST_USER = config["EMAIL_HOST_USER"]
-
-    EMAIL_PASSWORD = config["EMAIL_PASSWORD"]
-
-    EMAIL_HOST = config["EMAIL_HOST"]
-except KeyError:
+    SENDGRID_API_KEY = config["SENDGRID_API_KEY"]
+except NameError:
     pass
 
-DEFAULT_FROM_EMAIL = "owner@newdimensiontowers.com"
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

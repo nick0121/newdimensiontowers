@@ -51,3 +51,9 @@ STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 AWS_S3_CUSTOM_DOMAIN = "%s.s3.us-east-2.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
 STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+
+
+try:
+    SENDGRID_API_KEY = os.environ["SENDGRID_API_KEY"]
+except NameError:
+    pass
