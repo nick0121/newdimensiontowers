@@ -76,7 +76,7 @@ body {
   font-family: 'Abel', sans-serif;
   line-height: 1.2;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-top: 85px;
 }
 
@@ -109,10 +109,12 @@ body {
 .grid-container {
   width: 100%;
   display: block;
+  padding: 0 10px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   display: grid;
+  grid-template-columns: 1fr;
 }
 
 .grid-item {
@@ -208,6 +210,11 @@ body {
   padding: 0;
 }
 
+/* .boat-logos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
 .boat-logos {
   width: 90%;
   height: 100px;
@@ -232,7 +239,7 @@ body {
 .boat-manufac img {
   width: 80%;
   margin-bottom: 50px;
-  height: 3.7rem;
+  /* height: 3.7rem; */
   object-fit: contain;
 }
 
@@ -400,14 +407,9 @@ body {
   width: 100%;
 }
 
-/* swiper slide card */
-/* .acc-card { */
-  /* border: none; */
-  /* border-radius: 4px; */
-  /* width: 12rem; */
-  /* background-color: #fff;
-  margin: 0 auto; */
-/* } */
+.acc-card {
+  width: auto;
+}
 
 .acc-card a {
   background-color: #fff;
@@ -419,7 +421,7 @@ body {
 }
 
 h3.acc-card-title {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: #333;
   margin: 0;
@@ -428,7 +430,7 @@ h3.acc-card-title {
 
 p.acc-card-tag {
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.8rem;
 }
 
 .call {
@@ -565,6 +567,34 @@ footer .copy i {
 }
 
 /*************accessories ***************/
+/* Banner annoucement */
+.banner-alert {
+  width: 100%;
+  background-color: #f8f8f8;
+  margin-top: 75px;
+  font-size: 14px;
+  position: fixed;
+}
+
+.banner-top {
+  background-color: #D66706;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+}
+
+.banner-bottom {
+  width: 100%;
+  height: 25px;
+  background-color: #D66706;;
+}
+
+.banner-alert a {
+  text-decoration: none;
+  color: #D66706;
+}
+
+/* end banner annoucement */
 
 .main-description {
   max-width: 900px;
@@ -587,13 +617,18 @@ footer .copy i {
   border-bottom: 2px solid #ddd;
 }
 
+.main-accessories {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .item {
-  padding: 5px;
+  width: 100%;
 }
 
 .item img {
-  width: 80%;
-  max-height: 250px;
+  width: 100%;
+  height: auto;
 }
 
 .item p {
@@ -664,6 +699,7 @@ footer .copy i {
   font-weight: bold;
   margin: 5px 0;
   padding-left: 20px;
+  color: #D66706;
 }
 
 
@@ -1024,6 +1060,7 @@ footer .copy i {
 /**************** CARD *******************************************/
 .card-container h3 {
   text-transform: uppercase;
+  padding: 0 20px;
 }
 
 .box {
@@ -1035,6 +1072,7 @@ footer .copy i {
 
 /*****************NEW CARD *******************/
 .card {
+  position: relative;
   border: none;
   width: 8.5rem;
   height: 14rem;
@@ -1061,7 +1099,7 @@ footer .copy i {
 
 .card-title {
   display: block;
-  font-size: .8rem;
+  font-size: 1rem;
   font-weight: bold;
   padding: 10px 5px;
   text-align: left;
@@ -1076,11 +1114,15 @@ footer .copy i {
 }
 
 .card-bottom {
+  position: absolute;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid #9B9FB5;
   text-align: left;
+  left: 0;
+  right: 0;
+  bottom: 5px;
 }
 
 .card-price {
@@ -1094,8 +1136,9 @@ footer .copy i {
   float: right;
 }
 
-.card-icon i {
+i.card-icon {
   color: #9B9FB5;
+  padding: 5px;
 }
 
 /**************** About page styles *******************/
@@ -1236,10 +1279,12 @@ footer .copy i {
   padding: 20px;
 }
 
-.heading h2 {
+.heading h1 {
   padding-top: 150px;
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .heading p {
@@ -1365,9 +1410,9 @@ footer .copy i {
   display: flex;
 }
 
-#shop-content {
+/* #shop-content {
   display: none;
-}
+} */
 
 .left-column {
   width: 20%;
@@ -1587,41 +1632,265 @@ footer .copy i {
   width: 100%;
 }
 
+/********product****************/
 
-
-
-/* Responsive */
-@media (max-width: 940px) {
-  .container {
-    flex-direction: column;
-    margin-top: 60px;
-  }
- 
-  .left-column,
-  .right-column {
-    width: 100%;
-  }
- 
-  .left-column img {
-    width: 300px;
-    right: 0;
-    top: -65px;
-    left: initial;
-  }
+.product-headline-card {
+  width: 100%;
+  height: auto;
+  background-color: #f6f6f6;
+  margin-top: 75px;
+  border-bottom: 3px solid #D66706;
 }
- 
-@media (max-width: 535px) {
-  .left-column img {
-    width: 220px;
-    top: -85px;
-  }
+
+.product-headline-card p {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 10px 10px 10px;
+  font-size: .9rem;
 }
+
+.product-headline-card a {
+  color: #D66706;
+}
+
+
+.product-content {
+  margin-top: 50px;
+  display: grid;
+  grid-template-areas: "feature"
+                       "thumbnails"
+                       "content";
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.thumbnail-images {
+  grid-area: thumbnails;
+}
+
+.product-featured-image {
+  grid-area: feature;
+}
+
+.product-detail-section {
+  grid-area: content;
+}
+
+.thumbnail-images img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin: 2px auto;
+}
+
+.thumbnail-images ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-featured-image img {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.product-detail-section {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 50px;
+  /* border-bottom: 1px solid #e7e7e7; */
+}
+
+.product-detail-heading {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.product-detail-section .product-detail-title {
+  text-transform: capitalize;
+  color: #333;
+}
+
+.product-detail-title {
+  margin: 0;
+  margin-top: 1.2rem;
+}
+
+.product-detail-price {
+  color: #d65e0d;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.product-detail-availability {
+  color: #333;
+}
+
+.product-detail-availability span{
+  font-weight: bold;
+}
+
+.product-detail-tag {
+  margin: 0;
+  margin-bottom: 0.8rem;
+}
+
+.product-detail-section ul {
+  padding-left: 20px;
+  
+}
+
+.product-detail-section ul li {
+  font-size: 0.7rem;
+}
+
+
+.product-detail-checkout input[type=number]{
+  width: 4rem;
+  padding: 5px 10px;
+  border: solid 1px #D66706;
+  border-radius: 3px;
+}
+
+.product-detail-checkout a {
+  color: #D66706;
+  border: 1px solid #D66706;
+  border-radius: 3px;
+  padding: 5px 10px;
+} 
+
+.product-detail-checkout a:hover {
+  color: #fff;
+  background-color: #D66706;
+}
+
+
+.product-detail-description {
+  max-width: 500px;
+  padding-right: 1.2rem;
+}
+
+
+
+
+
+/* additional section */
+.product-additional-section {
+  width: 100%;
+  /* height: 150px; */
+  background-color: #e4e4e4;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+.product-additional-section h4 {
+  padding-top: 2rem;
+}
+
+/* choice selection */
+.product-detail-selection label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+.product-detail-selection select {
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 32px;
+  line-height: 1.42857143;
+  padding: 4px 25px 5.5px 11px;
+  vertical-align: baseline;
+  width: 70%;  /*change to 50% on large screens*/
+  box-sizing: border-box;
+}
+
+.product-detail-color.hidden {
+  display: none;
+}
+
+.sunbrella-colors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.sunbrella-colors-grid img {
+  margin: 2px;
+}
+
+.sunbrella-colors-grid img:hover {
+  cursor: pointer;
+  border: 2px solid #d65e0d;
+}
+
+.sunbrella-colors-grid img:focus {
+  border: 2px solid #d65e0d;
+}
+
+
+.sunbrella-colors-grid .focus {
+  border: 2px solid #d65e0d;
+}
+
+.sunbrella-colors-grid .opace {
+  opacity: .75;
+}
+
+#finish {
+  margin-bottom: 1.5rem;
+}
+
+.product-detail-input-lighted {
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  /* display: none; */
+}
+
+.product-detail-input-lighted span {
+  font-weight: normal;
+}
+
+/* .product-detail-input-racks {
+  display: none;
+} */
+
+
+.product-detail-input-racks label {
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+
+.rack-display img {
+  margin: 2px;
+}
+
+.product-detail-input-bimini {
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  /* display: none; */
+}
+
+/* .product-detail-selection {
+  display: none;
+} */
+
+
+
+.border {
+  border: 1px solid #D66706;
+}
+
 
 /*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************MEDIA_QUERIES*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @media screen and (min-width: 375px) {
-  .acc-card {
-    width: 15rem;
-  }
+
 
   .card {
     width: 10rem;
@@ -1631,6 +1900,7 @@ footer .copy i {
   .card-image {
     height: 120px;
   }
+
 }
 
 
@@ -1640,9 +1910,6 @@ footer .copy i {
     top: -100px;
   }
 
-  .acc-card {
-    width: 20rem;
-  }
 
   .card {
     width: 11rem;
@@ -1652,12 +1919,29 @@ footer .copy i {
   .card-image {
     height: 132px;
   }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .boat-manufac img {
+    max-width: 400px;
+  }
+
 }
 
 /*******************************RULES FOR SCREEN WIDTHS OF 520 PX OR GREATER***************************************/
 @media screen and (min-width: 520px) {
   .header-image img {
     top: -150px;
+  }
+}
+
+ 
+@media (max-width: 535px) {
+  .left-column img {
+    width: 220px;
+    top: -85px;
   }
 }
 
@@ -1671,15 +1955,19 @@ footer .copy i {
   }
 
   .fullsize-background h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     padding: 20px;
     padding-top: 100px;
   }
 
   /*Showcase cards*************************************/
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .grid-item img {
     width: 90%;
-    height: 175px;
+    /* height: 175px; */
   }
 
   .grid-item h3 {
@@ -1737,6 +2025,10 @@ footer .copy i {
     padding: 0 20px;
     margin-bottom: 25px;
   }
+
+  /* .boat-logos-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  } */
 
   .boat-manufac img {
     width: 90%;
@@ -1833,6 +2125,10 @@ footer .copy i {
     text-transform: uppercase;
   }
 
+  .main-accessories {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
 
   .accessories p {
     font-size: 1.2rem;
@@ -1856,7 +2152,6 @@ footer .copy i {
   .acc-card {
     border: none;
     border-radius: 4px;
-    width: 25rem;
     background-color: #fff;
     margin: 0 auto;
   }
@@ -1866,14 +2161,13 @@ footer .copy i {
     margin: 0;
   }
 
-  .acc-card-img {
-    width: 100%;
+  h3.acc-card-title {
+    font-size: 0.9rem;
   }
 
-  h3.acc-card-title {
-    font-size: 1.2rem;
-    color: #333;
-    margin: 0;
+  p.acc-card-tag {
+    text-align: center;
+    font-size: 0.8rem;
   }
 
   .image-gallery {
@@ -1962,6 +2256,59 @@ footer .copy i {
     margin-top: 20px;
   }
 
+  .thumbnail-images img {
+    width: 100px;
+    height: 100px;
+  }
+
+
+}
+
+/* Responsive */
+@media (max-width: 940px) {
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+ 
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+ 
+  .left-column img {
+    width: 300px;
+    right: 0;
+    top: -65px;
+    left: initial;
+  }
+}
+
+@media only screen  and (min-width : 968px) {
+  .thumbnail-images img {
+      width: 75px;
+      height: 75px;
+      display: block;
+  }
+
+  .product-content {
+      grid-template-areas: "thumbnails feature content";
+      grid-template-columns: 10% 40% 50%;
+  }
+
+  .product-detail-title {
+      margin: 0;
+      margin-top: 0;
+  }
+
+  .product-detail-selection select {
+      width: 50%;
+  }
+
+  .sunbrella-colors-grid {
+      width: 50%;
+  }
+
 
 }
 
@@ -1973,7 +2320,7 @@ footer .copy i {
   }
 
   .fullsize-background h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     padding: 100px 40px 0 40px;
   }
 
@@ -2048,6 +2395,10 @@ footer .copy i {
 
   .call a:hover {
     color: #fff;
+  }
+
+  .heading h1 {
+    font-size: 3rem;
   }
 
 
@@ -2206,7 +2557,7 @@ footer .copy i {
 
 
   .fullsize-background h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     padding: 150px 100px;
     margin-left: 40px;
     margin-right: 40px;
@@ -2326,7 +2677,7 @@ footer .copy i {
   }
 
   .accessories p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .accessories .accessories-wrapper .container-fluid {
