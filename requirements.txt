@@ -8,7 +8,7 @@ django-phone-field==1.8.0
 django-storages==1.9.1
 docutils==0.15.2
 jmespath==0.9.4
-Pillow==7.1.2
+Pillow==8.2.0
 psycopg2-binary==2.8.4
 python-dateutil==2.8.1
 python-stdnum==1.12
